@@ -15,10 +15,8 @@ comments:
    This folder contains the classes that are used by cucumber.
    It contains the Selectors of the screens and the necessary methods for the execution of the test cases.
 
-4)
-To run the test cases use:
+4) To run the test cases use:
 npx cypress run --browser chrome
 
-5)
-Dashboard of Cypress to see the result of the tests:
+5) Dashboard of Cypress to see the result of the tests:
 https://cloud.cypress.io/projects/1admhu/
