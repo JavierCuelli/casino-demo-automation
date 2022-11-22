@@ -1,8 +1,8 @@
 # casino-demo-automation
 
 ###### Comments ######
-1) In the folder: cypress\e2e\features
-   There are 3 feature files using Gherkins to write the test cases:  
+1) In the folder: cypress\e2e\features  
+   There are 3 features files using Gherkins to write the test cases:  
    
     footer.feature: has the FOOTER test cases      
     registration_user.feature: has the SIGN UP test cases  
@@ -15,7 +15,7 @@
     registration_user.js: has the STEPS of registration_user.feature  
     login.js: has the STEPS of login.feature
 
-3) In the folder: cypress\screenshots  
+3) In the folder: cypress\pages  
    This folder contains the classes that are used by cucumber.  
    It contains the Selectors of the screens and the necessary methods for the execution of the test cases:  
    
