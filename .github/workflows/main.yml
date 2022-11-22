@@ -1,0 +1,18 @@
+name: Cypress Test Casino Website
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.5.0
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
+        with:
+          browser: chrome
+          record: true
+          spec: |
+            cypress/e2e/features/footer.feature
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
