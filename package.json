@@ -1,0 +1,33 @@
+{
+  "name": "casino-automation",
+  "version": "2.2.0",
+  "description": "project to automate User Registration and an additional feature of the page https://demo.casino",
+  "main": "index.js",
+  "scripts": {
+    "open": "node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "testChrome": "npm run test -- --browser chrome",
+    "testChromeHeadles": "npm run test -- --browser chrome --headless",
+    "testUserRegistration": "npm run testChromeHeadles -- --spec \"cypress\\e2e\\features\\*\"",
+    "cypress:runner": "cypress open",
+    "cypress:execution": "cypress run",
+    "cypress:execution-tags": "cypress run --env tags=@mobile",
+    "cypress:execution-allure": "cypress run --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Javier Cuelli",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^11.1.0",
+    "esbuild": "^0.15.13",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  }
+}
