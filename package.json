@@ -9,6 +9,7 @@
     "testChrome": "npm run test -- --browser chrome",
     "testChromeHeadles": "npm run test -- --browser chrome --headless",
     "testUserRegistration": "npm run testChromeHeadles -- --spec \"cypress\\e2e\\features\\*\"",
+    "testDashboardChromeHeadless": "npm run test -- --record --key bcfcf0e7-da0d-46d4-b12f-0efdb4966cd7 --browser chrome --headless",
     "cypress:runner": "cypress open",
     "cypress:execution": "cypress run",
     "cypress:execution-tags": "cypress run --env tags=@mobile",
