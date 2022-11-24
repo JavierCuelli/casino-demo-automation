@@ -109,6 +109,17 @@ class registrationPage {
     this.elements.submitRegistrationBtn().click();
   }
 
+  isVisibleClosePopUpWelcome() {
+    cy.wait(2000)
+    this.elements.popUpWelcome().then($input => {
+      if (expect($input).visible) {
+        cy.log('Close pop-up "Welcome"')
+        this.clickPopUpWelcome()
+      }
+      return
+    })
+  }
+
   selectTemsAndConditions() {
     this.elements.selectTemsAndConditions().click();
   }

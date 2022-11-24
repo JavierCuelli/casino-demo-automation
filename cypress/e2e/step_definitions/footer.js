@@ -15,9 +15,8 @@ Given("A web browser is on the home page of demo.casino", () => {
 
 //// TEST CASE 1 ////
 When("A user selects the Slots option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Slots footer
   cy.log('Click option Slots from the footer')
@@ -31,9 +30,8 @@ Then("the url will contains the slot-games subdirectory", () => {
 
 //// TEST CASE 2 ////
 When("A user selects the Poker option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Poker footer
   cy.log('Click option Poker from the footer')
@@ -46,9 +44,8 @@ Then("the url will contains the poker subdirectory", () => {
 
 //// TEST CASE 3 ////
 When("A user selects the Card games option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Card footer
   cy.log('Click option Card from the footer')
@@ -61,9 +58,8 @@ Then("the url will contains the card-games subdirectory", () => {
 
 //// TEST CASE 4 ////
 When("A user selects the Lottery option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Lottery footer
   cy.log('Click option Lottery from the footer')
@@ -76,9 +72,8 @@ Then("the url will contains the lottery subdirectory", () => {
 
 //// TEST CASE 5 ////
 When("A user selects the Table games option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Table games footer
   cy.log('Click option Table games from the footer')
@@ -91,9 +86,8 @@ Then("the url will contains the table-games subdirectory", () => {
 
 //// TEST CASE 6 ////
 When("A user selects the Video poker option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Video poker footer
   cy.log('Click option Video poker from the footer')
@@ -106,9 +100,8 @@ Then("the url will contains the video-poker subdirectory", () => {
 
 //// TEST CASE 7 ////
 When("A user selects the Roulette option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Roulette footer
   cy.log('Click option Roulette poker from the footer')
@@ -121,9 +114,8 @@ Then("the url will contains the roulette subdirectory", () => {
 
 //// TEST CASE 8 ////
 When("A user selects the Live casino option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click Live casino footer
   cy.log('Click option Live casino from the footer')
@@ -134,11 +126,10 @@ Then("the url will contains the live-casino subdirectory", () => {
   cy.url().should("contains", "/gameType/live-casino");
 });
 
-//// TEST CASE 8 ////
+//// TEST CASE 9 ////
 When("A user selects the Video BSA option from the footer", () => {
-  //close pop-up "Welcome"
-  cy.log('Close pop-up "Welcome"')
-  homePage.clickPopUpWelcome()
+  //If visible, close pop-up "Welcome"
+  homePage.isVisibleClosePopUpWelcome()
 
   //click BSA footer
   cy.log('Click option BSA from the footer')

@@ -22,7 +22,19 @@ class loginPage {
   clickPopUpWelcome() {
     this.elements.popUpWelcome().click();
   }
-  submitLogin(email,password){
+
+  isVisibleClosePopUpWelcome() {
+    cy.wait(2000)
+    this.elements.popUpWelcome().then($input => {
+      if (expect($input).visible) {
+        cy.log('Close pop-up "Welcome"')
+        this.clickPopUpWelcome()
+      }
+      return
+    })
+  }
+
+  submitLogin(email, password) {
     this.elements.emailInput().type(email);
     this.elements.passwordInput().type(password);
     this.elements.loginBtn().click();

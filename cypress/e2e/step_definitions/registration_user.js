@@ -30,9 +30,8 @@ When("A user enters all mandatory fields: Email, Currency, Password, Secret Ques
       cy.log(row.postalCode + ' ** ' + row.name + ' ** ' + row.lastName + ' ** ' + row.middleName)
       cy.log(row.gender + ' ** ' + row.nickName + ' ** ' + row.bonus)
 
-      //close pop-up "Welcome"
-      cy.log('Close pop-up "Welcome"')
-      registrationPage.clickPopUpWelcome()
+      //If visible, close pop-up "Welcome"
+      registrationPage.isVisibleClosePopUpWelcome()
 
       //enter email
       cy.log('Enter EMAIL!')
@@ -136,9 +135,8 @@ When("A user provides an email that already exists, and complete all mandatory f
     cy.log(row.username);
     cy.log(row.email);
 
-    //close pop-up "Welcome"
-    cy.log('Close pop-up "Welcome"')
-    registrationPage.clickPopUpWelcome()
+    //If visible, close pop-up "Welcome"
+    registrationPage.isVisibleClosePopUpWelcome()
 
     //enter email
     cy.log('Enter EMAIL!')
@@ -161,9 +159,8 @@ When("A user provides a nickname that already exists, and complete all mandatory
     cy.log(row.nickName);
     cy.log(row.email);
 
-    //close pop-up "Welcome"
-    cy.log('Close pop-up "Welcome"')
-    registrationPage.clickPopUpWelcome()
+    //If visible, close pop-up "Welcome"
+    registrationPage.isVisibleClosePopUpWelcome()
 
     //enter Nickname
     cy.log('Enter NICKNAME!')

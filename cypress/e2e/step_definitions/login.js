@@ -19,9 +19,8 @@ When("A user enters the email {string}, and the password {string}, "
   + "and clicks on the login button: SIGN IN"
   , (email, password) => {
 
-    //close pop-up "Welcome"
-    cy.log('Close pop-up "Welcome"')
-    loginPage.clickPopUpWelcome()
+    //If visible, close pop-up "Welcome"
+    loginPage.isVisibleClosePopUpWelcome()
 
     //Enter email, password and select option: SIGN IN
     cy.log('Enter email, password and select option: SIGN IN')
@@ -38,9 +37,8 @@ When("A user provides incorrect Email, and clicks on the login button", (table) 
   table.hashes().forEach((row) => {
     cy.log(row.email + '**' + row.password);
 
-    //close pop-up "Welcome"
-    cy.log('Close pop-up "Welcome"')
-    loginPage.clickPopUpWelcome()
+    //If visible, close pop-up "Welcome"
+    loginPage.isVisibleClosePopUpWelcome()
 
     //Enter incorrect email, and enter password and select option: SIGN IN
     cy.log('Enter incorrect email, and enter password and select option: SIGN IN')
@@ -59,9 +57,8 @@ When("A user provides incorrect Password, and clicks on the login button", (tabl
   table.hashes().forEach((row) => {
     cy.log(row.email + '**' + row.password);
 
-    //close pop-up "Welcome"
-    cy.log('Close pop-up "Welcome"')
-    loginPage.clickPopUpWelcome()
+    //If visible, close pop-up "Welcome"
+    loginPage.isVisibleClosePopUpWelcome()
 
     //Enter incorrect password, and enter email and select option: SIGN IN
     cy.log('Enter incorrect password, and enter email and select option: SIGN IN')
