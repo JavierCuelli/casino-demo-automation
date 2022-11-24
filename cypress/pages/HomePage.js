@@ -13,39 +13,39 @@ class homePage {
   };
 
   clickRouletteFooter() {
-    this.elements.rouletteFooter().click();
+    this.elements.rouletteFooter().click({ force: true });
   }
 
   clickLiveCasinoFooter() {
-    this.elements.liveCasinoFooter().click();
+    this.elements.liveCasinoFooter().click({ force: true });
   }
 
   clickBsaFooter() {
-    this.elements.bsaFooter().click();
+    this.elements.bsaFooter().click({ force: true });
   }
 
   clickVideoPokerFooter() {
-    this.elements.videoPokerFooter().click();
+    this.elements.videoPokerFooter().click({ force: true });
   }
 
   clickTableGamesFooter() {
-    this.elements.tableGamesFooter().click();
+    this.elements.tableGamesFooter().click({ force: true });
   }
 
   clickCardFooter() {
-    this.elements.cardFooter().click();
+    this.elements.cardFooter().click({ force: true });
   }
 
   clickLotteryFooter() {
-    this.elements.lotteryFooter().click();
+    this.elements.lotteryFooter().click({ force: true });
   }
 
   clickSlotsFooter() {
-    this.elements.slotsFooter().click();
+    this.elements.slotsFooter().click({ force: true });
   }
 
   clickPokerFooter() {
-    this.elements.pokerFooter().click();
+    this.elements.pokerFooter().click({ force: true });
   }
 
   clickPopUpWelcome() {
@@ -55,7 +55,7 @@ class homePage {
   isVisibleClosePopUpWelcome() {
     cy.wait(2000)
     this.elements.popUpWelcome().then($input => {
-      if (expect($input).visible) {
+      if ($input.length) {
         cy.log('Close pop-up "Welcome"')
         this.clickPopUpWelcome()
       }

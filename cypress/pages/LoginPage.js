@@ -26,7 +26,7 @@ class loginPage {
   isVisibleClosePopUpWelcome() {
     cy.wait(2000)
     this.elements.popUpWelcome().then($input => {
-      if (expect($input).visible) {
+      if ($input.length) {  //expect($input).visible
         cy.log('Close pop-up "Welcome"')
         this.clickPopUpWelcome()
       }
